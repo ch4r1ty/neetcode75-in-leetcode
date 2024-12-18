@@ -3,8 +3,6 @@ This repository contains the NeetCode 75 problem list. Each problem includes its
 
 # NeetCode 75 -> LeetCode
 
-this is a test(12.18)
-
 ## 1. Array & Hashing
 
 - [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
