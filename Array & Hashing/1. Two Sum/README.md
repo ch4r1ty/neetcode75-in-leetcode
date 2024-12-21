@@ -29,3 +29,10 @@ class Solution {
         }
         hash.put(nums[i], i);
 ```
+
+另外，hashtable的key, value 还是需要理清一下:
+hash.get(key) 得到的是与这个 key 对应的 value
+```java
+res[0] = hash.get(target - nums[i]);
+res[1] = i;
+```
