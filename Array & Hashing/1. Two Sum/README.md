@@ -19,6 +19,9 @@ class Solution {
 }
 ```
 在for循环里面，if() 和 hash.put 的顺序一定不能反，不然的话会2个元素会是相同元素：
+举个例子：8 = 4 + 4
+
+先把4放进去的话，再判断8-4 =? 4的话，返回就是(4,4);所以要先判断，再填hashtable·
 ```java
     for (int i = 0; i < nums.length; i++) {
         // hash.put(nums[i], i);
