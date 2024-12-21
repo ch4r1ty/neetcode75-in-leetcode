@@ -5018,3 +5018,12 @@ class Solution {
 ### [685. Redundant Connection II](https://leetcode.com/problems/redundant-connection-ii/)
 
 变成有向图了，将近100行代码，二刷再看
+
+
+## day 57
+prim算法核心就是三步，我称为prim三部曲，大家一定要熟悉这三步，代码相对会好些很多：
+
+第一步，选距离生成树最近节点
+第二步，最近节点加入生成树
+第三步，更新非生成树节点到生成树的距离（即更新minDist数组）
+
