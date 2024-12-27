@@ -1,6 +1,10 @@
 # neetcode75-in-leetcode
 This repository contains the NeetCode 75 problem list. Each problem includes its corresponding LeetCode link.
 
+## TODO LIST
+* bucket sort
+* 
+
 # NeetCode 75 -> LeetCode
 
 ## 1. Array & Hashing
