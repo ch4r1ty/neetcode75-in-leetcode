@@ -23,7 +23,7 @@ class Solution {
         ListNode second = slow.next; // 保存斷開之前，slow的.next
         // ListNode prev = slow.next = null;
         slow.next = null; // 斷開鏈表
-        ListNode prev = null; // 初始化 prev 用於反轉鏈表
+        ListNode prev = null; // 初始化 prev , 用於反轉鏈表
 
         // 反轉第二部分
         while (second != null) {
