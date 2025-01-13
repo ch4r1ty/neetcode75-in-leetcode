@@ -4313,6 +4313,63 @@ public class Solution {
     }
 }
 ```
+acm模式
+```java
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Main {
+    static List<List<Integer>> res = new ArrayList<>();
+    static List<Integer> path = new ArrayList<>();
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+        
+        // 鄰接矩陣
+        int[][] graph = new int[n + 1][n + 1];
+        
+        for (int i = 0; i < m; i++) {
+            int s = scanner.nextInt();  // source, 邊的起點
+            int t = scanner.nextInt();  // target, 邊的終點
+            // 1 表示 s 與 t 是相連的
+            graph[s][t] = 1;
+        }
+        
+        path.add(1);
+        dfs(graph, 1, n);
+        
+        // output
+        if (res.isEmpty()) System.out.println(-1);
+        
+        for (List<Integer> pa : res) {
+            for (int i = 0; i < pa.size() - 1; i++) {
+                System.out.print(pa.get(i) + " ");
+            }
+            // System.out.println("");
+            System.out.println(pa.get(pa.size() - 1));
+        }
+    }
+    
+    public static void dfs(int[][] graph, int curr, int target) {
+        if (curr == target) {
+            res.add(new ArrayList<>(path));
+            return;
+        }
+        
+        for (int i = 1; i <= target; i++) {
+            if (graph[curr][i] == 1) {
+                path.add(i);
+                dfs(graph, i, target);
+                path.remove(path.size() - 1);
+            }
+        }
+    }
+}
+```
 
 ## day 51
 
