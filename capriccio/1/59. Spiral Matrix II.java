@@ -33,7 +33,7 @@ class Solution {
         if (n % 2 == 1) {
             nums[start][start] = count;
         }
-//
+
         return nums;
     }
 }
