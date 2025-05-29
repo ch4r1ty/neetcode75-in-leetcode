@@ -9,7 +9,6 @@ Let's start with the brute force approach. The simple way is to use a loop insid
 So we can use the technique of two pointers. Why two pointers? Because it allows us to complete all operations in a single pass through the array, making it both efficient and space-compliant. 
 We'll have a fast pointer and a slow pointer. The fast pointer is used to traverse and find the elements for our new array. Then we need to place these elements into the new array, and their positions are tracked using the slow pointer.
 
-
 Although the problem requires in-place operations, let's first visualize the solution by drawing it on a whiteboard.
 
 2. Here's how it works:

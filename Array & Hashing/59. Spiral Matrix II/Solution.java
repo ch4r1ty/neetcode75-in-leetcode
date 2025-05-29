@@ -1,21 +1,38 @@
 class Solution {
     public int[][] generateMatrix(int n) {
-        int[][] res = new int[n][n];
-        int num = 1, left = 0, right = n - 1, top = 0, bottom = n - 1;
-        while (left <= right && top <= bottom) {
-            for (int i = left; i <= right; i++) res[top][i] = num++;
-            top++;
-            for (int i = top; i <= bottom; i++) res[i][right] = num++;
-            right--;
-            if (top <= bottom) {
-                for (int i = right; i >= left; i--) res[bottom][i] = num++;
-                bottom--;
+        int[][] matrix = new int[n][n];
+        int value = 1;
+        int startX = 0, startY = 0;
+        int i = 0, j = 0;
+        int offset = 1;  // to count the loop
+        int loop = 0;
+
+        // 左閉右開
+        while (loop < n / 2) {
+            for (j = startY; j < n - offset; j++) {
+                matrix[startX][j] = value++;
             }
-            if (left <= right) {
-                for (int i = bottom; i >= top; i--) res[i][left] = num++;
-                left++;
+            for (i = startX; i < n - offset; i++) {
+                matrix[i][j] = value++;
             }
+            for (; j > startY; j--) {
+                matrix[i][j] = value++;
+                
+            }
+            for (; i > startX; i--) {
+                matrix[i][j] = value++;
+            }
+            startX++;
+            startY++;
+            loop++;
+            offset++;
+
+            
         }
-        return res;
+        if (n % 2 == 1) {
+            matrix[n/2][n/2] = value;
+        }
+
+        return matrix;
     }
-} 
+}
