@@ -1,0 +1,7 @@
+# Minimum Size Subarray Sum - Interview Script
+
+Let me start with the brute force solution. We need to traverse each number in the array. For each number, we try every possible subarray starting from this element, and keep adding up the sum. Once the sum is greater than or equal to the target, we record the length. We keep track of the minimum length we've found. This approach is straightforward but not very efficient, as we need to traverse through the array multiple times and check all possible subarrays.
+
+Now, let's improve this using a better approach. We can use the sliding window technique, also known as the two pointers method, to make our solution more efficient. We use two pointers, start and end, to represent the current window. We keep expanding the window by moving the end pointer and adding the current number to the sum. When the sum is greater than or equal to the target, we try to shrink the window from the left by moving the start pointer forward and subtracting numbers from the sum, and each time we meet the condition, we update the minimum length we've found.
+
+This way, we only need to go through the array once, making our solution much more efficient. The sliding window ensures that each element is visited at most twice, so the time complexity is O(n).
