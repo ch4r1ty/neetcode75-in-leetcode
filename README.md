@@ -136,3 +136,34 @@ This repository contains the NeetCode 75 problem list. Each problem includes its
 - [268. Missing Number](https://leetcode.com/problems/missing-number/)
 - [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/)
 
+## 15. Data Structure Operations Reference
+
+### Common Data Structure Operations
+
+| Operation | Stack (LIFO) | Queue (FIFO) | Deque (Double-ended) |
+|-----------|--------------|--------------|---------------------|
+| Insert    | push()       | enqueue()    | addFirst()/addLast()|
+| Remove    | pop()        | dequeue()    | removeFirst()/removeLast() |
+| Remove (No Exception)| -    | poll()      | pollFirst()/pollLast() |
+| Peek      | peek()       | peek()       | getFirst()/getLast() |
+| Check Empty| isEmpty()   | isEmpty()    | isEmpty()           |
+| Time Complexity | O(1)    | O(1)         | O(1)               |
+| Space Complexity| O(n)    | O(n)         | O(n)               |
+
+### Key Characteristics
+
+#### Stack: Last In First Out (LIFO)
+- Like a stack of plates
+- Only access from one end
+- Common use: function call stack, undo operations
+
+#### Queue: First In First Out (FIFO)
+- Like a line of people
+- Access from both ends but in specific order
+- Common use: task scheduling, breadth-first search
+
+#### Deque: Double-ended Queue
+- Like a deck of cards
+- Access from both ends in any order
+- Common use: sliding window, palindrome checking
+
