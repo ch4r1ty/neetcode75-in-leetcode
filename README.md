@@ -2,6 +2,7 @@
 This repository contains the NeetCode 75 problem list. Each problem includes its corresponding LeetCode link.
 
 ## TODO LIST
+* KMP
 * bucket sort
 * 105. Construct Binary Tree from Preorder and Inorder Traversal
 
