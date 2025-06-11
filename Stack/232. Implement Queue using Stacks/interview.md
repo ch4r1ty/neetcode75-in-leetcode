@@ -79,6 +79,7 @@ This solution is efficient because:
 |-----------|--------------|--------------|---------------------|
 | Insert    | push()       | enqueue()    | addFirst()/addLast()|
 | Remove    | pop()        | dequeue()    | removeFirst()/removeLast() |
+| Remove (No Exception)| -    | poll()      | pollFirst()/pollLast() |
 | Peek      | peek()       | peek()       | getFirst()/getLast() |
 | Check Empty| isEmpty()   | isEmpty()    | isEmpty()           |
 | Time Complexity | O(1)    | O(1)         | O(1)               |
