@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 class MyQueue {
 
     // **变量声明**

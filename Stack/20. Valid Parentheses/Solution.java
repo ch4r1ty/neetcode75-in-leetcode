@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 class Solution {
     public boolean isValid(String s) {
         // 底下这里要用Character，new 后面要大写S
