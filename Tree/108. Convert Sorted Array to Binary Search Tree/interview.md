@@ -6,10 +6,16 @@ For this problem, we're given a sorted array, and we need to build a height-bala
 
 The best way to do this is to always pick the middle element of the current subarray as the root. That way, the left and right subtrees will have about the same number of nodes.
 
-For binary tree problems, I like to use the "recursion three-step method":
-1. Figure out the function's parameters and return value.
-2. Decide the base case (when to stop).
-3. Write the logic for one step of recursion.
+For binary tree problems, I like to use the "recursion three-step method," and let's break down what that means for this specific problem:
+
+1. **Figure out the function's parameters and return value:**  
+   For this problem, our recursive function needs to know which part of the array we're currently working with. So, the parameters should be the array itself, plus two indices (`left` and `right`) that define the current subarray. The return value should be the root node of the subtree built from that subarray.
+
+2. **Decide the base case (when to stop):**  
+   The base case is when the subarray is empty—that is, when `left > right`. In this case, there's nothing to build, so we return `null`. This stops the recursion.
+
+3. **Write the logic for one step of recursion:**  
+   For each recursive call, we pick the middle element of the current subarray as the root node. Then, we recursively build the left subtree from the left half of the subarray, and the right subtree from the right half. This ensures the tree stays balanced, because we're always splitting the array as evenly as possible.
 
 ## Code
 
