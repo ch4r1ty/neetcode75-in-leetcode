@@ -23,3 +23,14 @@
 *** 8/17
 297. Serialize and Deserialize Binary Tree
 https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+
+新题目
+
+```python
+','.join(vals)
+vals = data.split(',')
+```
+
+## 代码说明
+- `','.join(vals)`: 将列表 `vals` 中的元素用逗号连接成字符串
+- `vals = data.split(',')`: 将字符串 `data` 按逗号分割成列表
